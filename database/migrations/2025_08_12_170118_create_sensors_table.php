@@ -18,8 +18,7 @@ return new class extends Migration
             $table->string('codigo')->unique();
             $table->string('tipo')->nullable(false);
             $table->string('descricao')->nullable(false);
-            $table->string('descricao')->nullable(false);
-
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }

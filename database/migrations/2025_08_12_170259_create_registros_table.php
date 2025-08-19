@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('registros', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('sensor_id')->constrained('sensores')->onDelete('cascade');
+            $table->foreignId('sensor_id')->constrained('sensors')->onDelete('cascade');
             $table->string('valor')->nullable('false');
             $table->string('unidade')->nullable();
             $table->dateTime('data_hora')->nullable('false');
