@@ -18,7 +18,7 @@ class Dashboard extends Component
     public $dadosSensores = [];
 
     public function mount(){
-        $this->carregaDados();
+       
     }
 
 
