@@ -22,10 +22,11 @@ class RegistroList extends Component
  
     public function render()
     {
-        $registro = Registro::where('tipo', 'like', "{$this->search}%")
+        $registros = Registro::where('sensor_id', 'like', "{$this->search}%")
         ->orWhere('valor', 'like', "{$this->search}%")
         ->orWhere('unidade', 'like', "{$this->search}%")
         ->orWhere('data_hora', 'like', "{$this->search}%")
+        ->orderByDesc('id', 'data_hora', 'valor', 'unidade', 'sensor_id')
         ->paginate($this->perPage);
 
         return view('livewire.registro.registro-list', compact('registros'));
