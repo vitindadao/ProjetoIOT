@@ -14,10 +14,10 @@ return new class extends Migration
     {
         Schema::create('sensors', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('ambiente_Id')->constrained('ambientes')->onDelete('cascade');
+            $table->foreignId('ambiente_id')->constrained('ambientes')->onDelete('cascade');
             $table->string('codigo')->unique();
             $table->string('tipo')->nullable(false);
-            $table->string('descricao')->nullable(false);
+            $table->text('descricao')->nullable(false);
             $table->boolean('status')->default(true);
             $table->timestamps();
         });
