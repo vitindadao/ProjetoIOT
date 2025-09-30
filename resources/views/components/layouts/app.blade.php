@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
     <title>{{ $title ?? 'Page Title' }}</title>
 </head>
@@ -54,7 +54,7 @@
                 <small class="text-muted">Escola SESI/SENAI de Presidente Epitácio</small>
             </header>
 
-            <main class="main-content">
+            <main class="main-content bg-secondary">
                 {{ $slot }}
             </main>
         </div>
