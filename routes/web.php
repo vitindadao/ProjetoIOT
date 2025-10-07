@@ -14,7 +14,6 @@ use App\Livewire\Sensor\SensorEdit;
 use App\Livewire\Sensor\SensorList;
 use App\Models\Sensor;
 use Illuminate\Routing\RouteRegistrar;
-use Illuminate\Support\Facades\Route;
 
 Route::get('/',Dashboard::class);
 Route::get('sensor/create', SensorCreate::class)->name('sensor.create');
