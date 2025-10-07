@@ -18,14 +18,12 @@ use App\Livewire\Dashboard;
 
 Route::get('/', Dashboard::class);
 
-use App\Livewire\Dashboard;
 use App\Livewire\Sensor\SensorCreate;
 use App\Livewire\Sensor\SensorDelete;
 use App\Livewire\Sensor\SensorEdit;
 use App\Livewire\Sensor\SensorList;
 use App\Models\Sensor;
 use Illuminate\Routing\RouteRegistrar;
-use Illuminate\Support\Facades\Route;
 
 Route::get('/',Dashboard::class);
 Route::get('sensor/create', SensorCreate::class)->name('sensor.create');
